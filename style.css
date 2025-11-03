@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
-  color-scheme: light dark; 
+  color-scheme: light dark;
   --main-bg-color: #d2b48c;
   --nav-bg-color: #8b4513;
   --accent-color: #45a049;
@@ -12,7 +12,7 @@
 
 body {
   font-family: 'Roboto', Arial, sans-serif;
-  background-color: light-dark(var(--main-bg-color), #2a1810); 
+  background-color: light-dark(var(--main-bg-color), #2a1810);
   color: light-dark(#333, #e0e0e0);
   padding: 2%;
   font-size: var(--font-size-base);
@@ -49,6 +49,12 @@ nav a:hover {
   transform: scale(1.1);
 }
 
+nav:has(a:hover) {
+  background-color: light-dark(rgba(139, 69, 19, 0.1), rgba(90, 45, 15, 0.2));
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
 fieldset {
   border: 3px solid light-dark(#8b4513, #d2a679);
   border-radius: 8px;
@@ -67,7 +73,7 @@ hero-card {
   border-radius: 12px;
   padding: 1.5rem;
   margin: 1rem auto;
-  background-color: light-dark(#8b5a3c, #1a0f0a);
+  background-color: light-dark(#b8935f, #1f1208);
   color: light-dark(#2c1810, #f2f1ed);
   font-family: 'Roboto', sans-serif;
   animation: fadeIn 1.5s ease-in-out;
@@ -82,8 +88,15 @@ hero-card:hover {
   border-color: light-dark(#FFD700, #ffa500);
 }
 
+section:has(hero-card:hover) {
+  background-color: light-dark(rgba(210, 180, 140, 0.05), rgba(42, 24, 16, 0.5));
+  border-radius: 1rem;
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+}
+
 hero-card h2 {
-  color: light-dark(#D2A679, #FFD700);
+  color: light-dark(#8b5a3c, #FFD700);
   margin-bottom: 0.5rem;
 }
 
