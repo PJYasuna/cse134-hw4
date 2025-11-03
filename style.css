@@ -47,6 +47,7 @@ nav a {
 nav a:hover {
   background-color: light-dark(var(--accent-color), #3a7a32);
   transform: scale(1.1);
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--nav-bg-color) 50%, var(--accent-color) 50%);
 }
 
 nav:has(a:hover) {
